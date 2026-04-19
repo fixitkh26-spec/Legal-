@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — FixIt Cambodia</title>
+  <meta name="description" content="FixIt Cambodia Terms of Service. Rules and guidelines for using the FixIt platform.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kantumruy+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --green: #2ECC71;
+      --green-dark: #27AE60;
+      --green-light: #E8F8F0;
+      --charcoal: #1A1A2E;
+      --text: #2D3436;
+      --text-secondary: #636E72;
+      --border: #E9ECEF;
+      --bg: #FFFFFF;
+      --bg-alt: #F8F9FA;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body.km {
+      font-family: 'Kantumruy Pro', 'Inter', sans-serif;
+    }
+
+    [data-lang="km"] { display: none; }
+    body.km [data-lang="km"] { display: block; }
+    body.km [data-lang="en"] { display: none; }
+
+    span[data-lang="km"] { display: none; }
+    body.km span[data-lang="km"] { display: inline; }
+    body.km span[data-lang="en"] { display: none; }
+
+    .header {
+      background: var(--charcoal);
+      padding: 20px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .header-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .logo-fix { color: var(--green); }
+    .logo-it { color: #FFFFFF; }
+    .header-nav a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .header-nav a:hover { color: #FFFFFF; }
+
+    .lang-toggle {
+      display: flex;
+      gap: 4px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 3px;
+    }
+    .lang-btn {
+      border: none;
+      background: transparent;
+      color: rgba(255,255,255,0.6);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+    .lang-btn.active {
+      background: var(--green);
+      color: #FFFFFF;
+    }
+    .lang-btn:hover:not(.active) {
+      color: #FFFFFF;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--charcoal) 0%, #16213E 100%);
+      padding: 56px 24px 48px;
+      text-align: center;
+    }
+    .hero h1 {
+      color: #FFFFFF;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .hero .subtitle {
+      color: rgba(255,255,255,0.6);
+      font-size: 15px;
+    }
+    .hero .effective {
+      display: inline-block;
+      margin-top: 16px;
+      background: rgba(46,204,113,0.15);
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 20px;
+    }
+
+    .content {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-top: 48px;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--green-light);
+    }
+    h2:first-of-type { margin-top: 0; }
+
+    h3 {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+
+    p { margin-bottom: 16px; }
+
+    ul {
+      margin-bottom: 16px;
+      padding-left: 0;
+      list-style: none;
+    }
+    ul li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 10px;
+    }
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 8px;
+      height: 8px;
+      background: var(--green);
+      border-radius: 50%;
+    }
+
+    strong { color: var(--charcoal); font-weight: 600; }
+
+    a {
+      color: var(--green-dark);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    a:hover { color: var(--green); }
+
+    .callout {
+      background: var(--green-light);
+      border-left: 4px solid var(--green);
+      padding: 16px 20px;
+      border-radius: 0 10px 10px 0;
+      margin: 20px 0;
+      font-size: 15px;
+    }
+
+    .callout-warning {
+      background: #FFF3E0;
+      border-left-color: #FF9800;
+    }
+
+    .contact-card {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      margin-top: 24px;
+    }
+    .contact-card h3 { margin-top: 0; font-size: 18px; }
+    .contact-card a { color: var(--green-dark); font-weight: 500; }
+
+    .footer {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+    .footer a { color: var(--green-dark); font-weight: 500; }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      .content { padding: 32px 20px 60px; }
+      .header-inner { flex-wrap: wrap; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="index.html" class="logo"><span class="logo-fix">Fix</span><span class="logo-it">It</span></a>
+        <nav class="header-nav">
+          <a href="privacy.html">
+            <span data-lang="en">Privacy Policy</span>
+            <span data-lang="km">គោលការណ៍ឯកជនភាព</span>
+          </a>
+        </nav>
+      </div>
+      <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('en')" id="btn-en">EN</button>
+        <button class="lang-btn" onclick="setLang('km')" id="btn-km">ខ្មែរ</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1 data-lang="en">Terms of Service</h1>
+    <h1 data-lang="km">លក្ខខណ្ឌនៃសេវាកម្ម</h1>
+    <p class="subtitle" data-lang="en">Rules and guidelines for using the FixIt platform</p>
+    <p class="subtitle" data-lang="km">ច្បាប់ និងការណែនាំសម្រាប់ការប្រើប្រាស់វេទិកា FixIt</p>
+    <span class="effective" data-lang="en">Effective April 2026</span>
+    <span class="effective" data-lang="km">ចូលជាធរមាន ខែមេសា ២០២៦</span>
+  </section>
+
+  <main class="content">
+
+    <!-- ==================== ENGLISH ==================== -->
+    <div data-lang="en">
+
+    <h2>1. Introduction</h2>
+    <p>Welcome to FixIt. By creating an account or using our app, you agree to these Terms of Service. If you do not agree, please do not use FixIt.</p>
+    <p>FixIt is operated in the Kingdom of Cambodia. These terms are governed by the laws of Cambodia.</p>
+
+    <h2>2. Service Description</h2>
+    <p>FixIt is a mobile marketplace that connects customers who need air conditioning (AC) services with independent service providers in Cambodia. FixIt is <strong>not</strong> an AC service company — we provide the technology platform that facilitates connections between customers and providers.</p>
+    <p>FixIt does not employ, supervise, or control the service providers on the platform. Providers are independent professionals responsible for the quality and safety of their own work.</p>
+
+    <h2>3. User Accounts</h2>
+    <ul>
+      <li>You must be at least <strong>18 years old</strong> to create an account on FixIt.</li>
+      <li>You must provide accurate and truthful information during registration, including your name, phone number, and email address.</li>
+      <li>You are responsible for keeping your account credentials secure. Do not share your login with others.</li>
+      <li>Each person may maintain only one account. Duplicate accounts may be removed.</li>
+      <li>FixIt is available in English and Khmer.</li>
+    </ul>
+
+    <h2>4. Booking Process</h2>
+
+    <h3>For Customers</h3>
+    <ul>
+      <li>You may browse available providers, view their profiles, services, and pricing, and submit a booking request.</li>
+      <li>A booking is confirmed only when a provider accepts your request.</li>
+      <li>You must provide accurate details about your location and the service you need so the provider can prepare appropriately.</li>
+    </ul>
+
+    <h3>For Providers</h3>
+    <ul>
+      <li>You will receive booking requests from nearby customers.</li>
+      <li>You may accept or decline any booking request.</li>
+      <li>Once you accept a booking, you are expected to complete the service as agreed.</li>
+    </ul>
+
+    <h2>5. Payment Terms</h2>
+    <ul>
+      <li>Customers pay for services by transferring funds to FixIt's bank accounts via <strong>QR code payment</strong> or <strong>bank transfer</strong>. Supported banks include <strong>ABA Bank</strong>, <strong>ACLEDA Bank</strong>, and <strong>Wing</strong>.</li>
+      <li>Payments are made to FixIt, not directly to the provider. FixIt holds the funds on behalf of the provider until a withdrawal is requested.</li>
+      <li>The customer is responsible for ensuring the correct payment amount is transferred.</li>
+      <li>FixIt will confirm receipt of payment and update the booking status accordingly.</li>
+    </ul>
+
+    <h2>6. Commission Structure</h2>
+    <div class="callout">
+      FixIt charges a <strong>10% commission</strong> on all completed bookings, regardless of payment method. The commission is deducted from the provider's earnings at the time of withdrawal.
+    </div>
+    <p>FixIt reserves the right to change the commission rate with reasonable advance notice to providers.</p>
+
+    <h2>7. Withdrawals</h2>
+    <ul>
+      <li>Providers may request a withdrawal of their available earnings through the app.</li>
+      <li>Withdrawal requests are processed <strong>manually within 1–3 business days</strong>.</li>
+      <li>FixIt reserves the right to verify withdrawal requests before processing to prevent fraud.</li>
+      <li>A minimum withdrawal amount may apply.</li>
+      <li>Payouts are made to the provider's designated bank account (ABA, ACLEDA, or Wing).</li>
+    </ul>
+
+    <h2>8. Cancellation Policy</h2>
+
+    <h3>Before Acceptance</h3>
+    <p>Customers may cancel a booking request at no charge before it is accepted by a provider.</p>
+
+    <h3>After Acceptance</h3>
+    <ul>
+      <li>If a customer cancels after a provider has accepted the booking, the cancellation is subject to the provider's discretion. The provider may choose to waive any charges or request reasonable compensation for time and preparation.</li>
+      <li>If a provider cancels an accepted booking, they should notify the customer as soon as possible. Repeated cancellations by a provider may affect their standing on the platform.</li>
+    </ul>
+
+    <h3>No-Shows</h3>
+    <p>If a customer is not available at the agreed location and time without prior notice, the provider may mark the booking as a no-show.</p>
+
+    <h2>9. Provider Obligations</h2>
+    <p>As a service provider on FixIt, you agree to:</p>
+    <ul>
+      <li>Provide accurate and up-to-date profile information, including your services, pricing, service areas, and availability.</li>
+      <li>Deliver services professionally and to a reasonable standard of quality.</li>
+      <li>Communicate clearly and respectfully with customers.</li>
+      <li>Comply with all applicable laws and regulations in Cambodia related to your services.</li>
+      <li>Maintain any licenses or certifications required for your services.</li>
+    </ul>
+    <div class="callout callout-warning">
+      <strong>Important:</strong> Do not bypass FixIt's payment system to avoid commission. This includes directing customers to pay you directly for bookings arranged through the platform. Violation of this term may result in <strong>permanent account suspension</strong>.
+    </div>
+
+    <h2>10. Customer Obligations</h2>
+    <p>As a customer on FixIt, you agree to:</p>
+    <ul>
+      <li>Provide accurate booking information, including your location and service requirements.</li>
+      <li>Be available at the agreed location and time for your service appointment.</li>
+      <li>Pay for services through FixIt's payment system as described in these terms.</li>
+      <li>Leave honest reviews based on your actual service experience. False, misleading, or malicious reviews may result in account suspension.</li>
+      <li>Treat service providers with respect and courtesy.</li>
+    </ul>
+
+    <h2>11. Limitation of Liability</h2>
+    <ul>
+      <li>FixIt is a <strong>marketplace platform only</strong>. We do not guarantee the quality, safety, timeliness, or outcome of any services provided by independent providers.</li>
+      <li>FixIt is not liable for any damages, injuries, losses, or disputes arising from services arranged through the platform.</li>
+      <li>FixIt does not provide warranties of any kind, whether express or implied, regarding the services listed on the platform.</li>
+      <li>Our total liability to you for any claim arising from your use of FixIt shall not exceed the amount you have paid through the platform in the 3 months preceding the claim.</li>
+      <li>FixIt is not responsible for service interruptions, technical issues, or data loss beyond our reasonable control.</li>
+    </ul>
+
+    <h2>12. Dispute Resolution</h2>
+    <ul>
+      <li>If a dispute arises between a customer and a provider, we encourage both parties to communicate directly and attempt to resolve the matter amicably.</li>
+      <li>Either party may contact FixIt at <a href="mailto:fixitkh26@gmail.com">fixitkh26@gmail.com</a> to report a dispute. FixIt may, at its discretion, review the situation and mediate, but is <strong>not obligated</strong> to resolve disputes between users.</li>
+      <li>FixIt's decision in any mediated dispute is final.</li>
+      <li>For unresolved disputes, the parties may seek resolution through the appropriate legal channels in Cambodia.</li>
+    </ul>
+
+    <h2>13. Account Termination</h2>
+    <p>FixIt reserves the right to suspend or permanently terminate any account that:</p>
+    <ul>
+      <li>Violates these Terms of Service.</li>
+      <li>Engages in fraudulent, deceptive, or illegal activity.</li>
+      <li>Bypasses FixIt's payment system to avoid commission.</li>
+      <li>Receives consistent negative reviews or complaints from other users.</li>
+      <li>Harms the reputation, safety, or integrity of the FixIt platform.</li>
+      <li>Remains inactive for an extended period (with prior notice).</li>
+    </ul>
+    <p>You may also voluntarily close your account at any time by using the <strong>"Delete Account"</strong> option in your profile settings within the app, or by contacting us at <a href="mailto:fixitkh26@gmail.com">fixitkh26@gmail.com</a>. Upon account closure, any remaining balance will be processed according to our standard withdrawal procedures.</p>
+
+    <h2>14. Modification of Terms</h2>
+    <ul>
+      <li>FixIt may update these Terms of Service from time to time.</li>
+      <li>We will notify users of significant changes through the app or via email.</li>
+      <li>Continued use of FixIt after changes are posted constitutes your acceptance of the updated terms.</li>
+      <li>If you do not agree with the updated terms, you should stop using the platform and close your account.</li>
+    </ul>
+
+    <h2>15. Contact Us</h2>
+    <p>If you have any questions about these Terms of Service, please contact us:</p>
+    <div class="contact-card">
+      <h3>FixIt Cambodia</h3>
+      <p>
+        Email: <a href="mailto:fixitkh26@gmail.com">fixitkh26@gmail.com</a><br>
+        Support: <a href="mailto:fixitsupport.kh@gmail.com">fixitsupport.kh@gmail.com</a>
+      </p>
+    </div>
+
+    </div>
+
+    <!-- ==================== KHMER ==================== -->
+    <div data-lang="km">
+
+    <h2>១. សេចក្តីផ្តើម</h2>
+    <p>សូមស្វាគមន៍មកកាន់ FixIt។ ដោយការបង្កើតគណនី ឬប្រើប្រាស់កម្មវិធីរបស់យើង អ្នកយល់ព្រមលើលក្ខខណ្ឌនៃសេវាកម្មទាំងនេះ។ ប្រសិនបើអ្នកមិនយល់ព្រម សូមកុំប្រើប្រាស់ FixIt។</p>
+    <p>FixIt ដំណើរការនៅក្នុងព្រះរាជាណាចក្រកម្ពុជា។ លក្ខខណ្ឌទាំងនេះស្ថិតក្រោមច្បាប់នៃប្រទេសកម្ពុជា។</p>
+
+    <h2>២. ការពិពណ៌នាសេវាកម្ម</h2>
+    <p>FixIt គឺជាទីផ្សារចល័តដែលភ្ជាប់អតិថិជនដែលត្រូវការសេវាកម្មម៉ាស៊ីនត្រជាក់ (AC) ជាមួយអ្នកផ្តល់សេវាឯករាជ្យនៅកម្ពុជា។ FixIt <strong>មិនមែន</strong>ជាក្រុមហ៊ុនសេវាកម្មម៉ាស៊ីនត្រជាក់ទេ — យើងផ្តល់វេទិកាបច្ចេកវិទ្យាដែលជួយសម្រួលការតភ្ជាប់រវាងអតិថិជន និងអ្នកផ្តល់សេវា។</p>
+    <p>FixIt មិនជួល មិនត្រួតពិនិត្យ ឬគ្រប់គ្រងអ្នកផ្តល់សេវានៅលើវេទិកាទេ។ អ្នកផ្តល់សេវាគឺជាអ្នកជំនាញឯករាជ្យដែលទទួលខុសត្រូវចំពោះគុណភាព និងសុវត្ថិភាពនៃការងាររបស់ពួកគេ។</p>
+
+    <h2>៣. គណនីអ្នកប្រើប្រាស់</h2>
+    <ul>
+      <li>អ្នកត្រូវមានអាយុយ៉ាងហោចណាស់ <strong>១៨ ឆ្នាំ</strong> ដើម្បីបង្កើតគណនីនៅលើ FixIt។</li>
+      <li>អ្នកត្រូវផ្តល់ព័ត៌មានត្រឹមត្រូវ និងពិតប្រាកដក្នុងអំឡុងពេលចុះឈ្មោះ រួមទាំងឈ្មោះ លេខទូរសព្ទ និងអាសយដ្ឋានអ៊ីមែលរបស់អ្នក។</li>
+      <li>អ្នកទទួលខុសត្រូវក្នុងការរក្សាព័ត៌មានសម្ងាត់គណនីរបស់អ្នកឱ្យមានសុវត្ថិភាព។ កុំចែករំលែកការចូលរបស់អ្នកជាមួយអ្នកដទៃ។</li>
+      <li>បុគ្គលម្នាក់ៗអាចមានគណនីតែមួយប៉ុណ្ណោះ។ គណនីស្ទួនអាចត្រូវបានដកចេញ។</li>
+      <li>FixIt មានជាភាសាអង់គ្លេស និងភាសាខ្មែរ។</li>
+    </ul>
+
+    <h2>៤. ដំណើរការកក់</h2>
+
+    <h3>សម្រាប់អតិថិជន</h3>
+    <ul>
+      <li>អ្នកអាចរុករកអ្នកផ្តល់សេវាដែលមាន មើលប្រវត្តិរូប សេវាកម្ម និងតម្លៃរបស់ពួកគេ និងដាក់សំណើកក់។</li>
+      <li>ការកក់ត្រូវបានបញ្ជាក់តែនៅពេលអ្នកផ្តល់សេវាទទួលយកសំណើរបស់អ្នក។</li>
+      <li>អ្នកត្រូវផ្តល់ព័ត៌មានលម្អិតត្រឹមត្រូវអំពីទីតាំង និងសេវាកម្មដែលអ្នកត្រូវការ ដើម្បីឱ្យអ្នកផ្តល់សេវាអាចរៀបចំបានត្រឹមត្រូវ។</li>
+    </ul>
+
+    <h3>សម្រាប់អ្នកផ្តល់សេវា</h3>
+    <ul>
+      <li>អ្នកនឹងទទួលបានសំណើកក់ពីអតិថិជនដែលនៅជិត។</li>
+      <li>អ្នកអាចទទួលយក ឬបដិសេធសំណើកក់ណាមួយ។</li>
+      <li>នៅពេលអ្នកទទួលយកការកក់ អ្នកត្រូវបានរំពឹងថានឹងបញ្ចប់សេវាកម្មតាមការព្រមព្រៀង។</li>
+    </ul>
+
+    <h2>៥. លក្ខខណ្ឌការទូទាត់</h2>
+    <ul>
+      <li>អតិថិជនបង់ថ្លៃសេវាកម្មដោយផ្ទេរប្រាក់ទៅគណនីធនាគាររបស់ FixIt តាមរយៈ<strong>ការទូទាត់កូដ QR</strong> ឬ<strong>ការផ្ទេរតាមធនាគារ</strong>។ ធនាគារដែលគាំទ្ររួមមាន <strong>ABA Bank</strong>, <strong>ACLEDA Bank</strong>, និង <strong>Wing</strong>។</li>
+      <li>ការទូទាត់ត្រូវបានធ្វើទៅ FixIt មិនមែនដោយផ្ទាល់ទៅអ្នកផ្តល់សេវាទេ។ FixIt រក្សាប្រាក់ជំនួសអ្នកផ្តល់សេវារហូតដល់មានការស្នើសុំដកប្រាក់។</li>
+      <li>អតិថិជនទទួលខុសត្រូវក្នុងការធានាថាចំនួនទឹកប្រាក់ត្រឹមត្រូវត្រូវបានផ្ទេរ។</li>
+      <li>FixIt នឹងបញ្ជាក់ការទទួលការទូទាត់ និងធ្វើបច្ចុប្បន្នភាពស្ថានភាពការកក់ទៅតាមនោះ។</li>
+    </ul>
+
+    <h2>៦. រចនាសម្ព័ន្ធកម្រៃជើងសារ</h2>
+    <div class="callout">
+      FixIt គិតកម្រៃជើងសារ <strong>១០%</strong> លើការកក់ទាំងអស់ដែលបានបញ្ចប់ ដោយមិនគិតពីវិធីសាស្ត្រទូទាត់។ កម្រៃជើងសារត្រូវបានកាត់ចេញពីប្រាក់ចំណូលរបស់អ្នកផ្តល់សេវានៅពេលដកប្រាក់។
+    </div>
+    <p>FixIt រក្សាសិទ្ធិក្នុងការផ្លាស់ប្តូរអត្រាកម្រៃជើងសារដោយមានការជូនដំណឹងជាមុនសមរម្យដល់អ្នកផ្តល់សេវា។</p>
+
+    <h2>៧. ការដកប្រាក់</h2>
+    <ul>
+      <li>អ្នកផ្តល់សេវាអាចស្នើសុំដកប្រាក់ចំណូលដែលមានរបស់ពួកគេតាមរយៈកម្មវិធី។</li>
+      <li>សំណើដកប្រាក់ត្រូវបានដំណើរការ<strong>ដោយដៃក្នុងរយៈពេល ១–៣ ថ្ងៃធ្វើការ</strong>។</li>
+      <li>FixIt រក្សាសិទ្ធិក្នុងការផ្ទៀងផ្ទាត់សំណើដកប្រាក់មុនពេលដំណើរការដើម្បីការពារការក្លែងបន្លំ។</li>
+      <li>ចំនួនអប្បបរមានៃការដកប្រាក់អាចត្រូវអនុវត្ត។</li>
+      <li>ការទូទាត់ត្រូវបានធ្វើទៅគណនីធនាគារដែលបានកំណត់របស់អ្នកផ្តល់សេវា (ABA, ACLEDA, ឬ Wing)។</li>
+    </ul>
+
+    <h2>៨. គោលការណ៍បោះបង់</h2>
+
+    <h3>មុនការទទួលយក</h3>
+    <p>អតិថិជនអាចបោះបង់សំណើកក់ដោយមិនគិតថ្លៃមុនពេលអ្នកផ្តល់សេវាទទួលយក។</p>
+
+    <h3>បន្ទាប់ពីការទទួលយក</h3>
+    <ul>
+      <li>ប្រសិនបើអតិថិជនបោះបង់បន្ទាប់ពីអ្នកផ្តល់សេវាបានទទួលយកការកក់ ការបោះបង់គឺស្ថិតនៅក្រោមការសម្រេចចិត្តរបស់អ្នកផ្តល់សេវា។ អ្នកផ្តល់សេវាអាចជ្រើសរើសលើកលែងការគិតថ្លៃ ឬស្នើសុំសំណងសមរម្យសម្រាប់ពេលវេលា និងការរៀបចំ។</li>
+      <li>ប្រសិនបើអ្នកផ្តល់សេវាបោះបង់ការកក់ដែលបានទទួលយក ពួកគេគួរជូនដំណឹងអតិថិជនឱ្យបានឆាប់តាមដែលអាចធ្វើបាន។ ការបោះបង់ម្តងហើយម្តងទៀតដោយអ្នកផ្តល់សេវាអាចប៉ះពាល់ដល់ស្ថានភាពរបស់ពួកគេនៅលើវេទិកា។</li>
+    </ul>
+
+    <h3>ការមិនបង្ហាញខ្លួន</h3>
+    <p>ប្រសិនបើអតិថិជនមិនមាននៅទីតាំង និងពេលវេលាដែលបានព្រមព្រៀងដោយគ្មានការជូនដំណឹងជាមុន អ្នកផ្តល់សេវាអាចសម្គាល់ការកក់ថាមិនបង្ហាញខ្លួន។</p>
+
+    <h2>៩. កាតព្វកិច្ចអ្នកផ្តល់សេវា</h2>
+    <p>ក្នុងនាមជាអ្នកផ្តល់សេវានៅលើ FixIt អ្នកយល់ព្រម៖</p>
+    <ul>
+      <li>ផ្តល់ព័ត៌មានប្រវត្តិរូបត្រឹមត្រូវ និងទាន់សម័យ រួមទាំងសេវាកម្ម តម្លៃ តំបន់សេវាកម្ម និងភាពអាចរកបានរបស់អ្នក។</li>
+      <li>ផ្តល់សេវាកម្មដោយវិជ្ជាជីវៈ និងតាមស្តង់ដារគុណភាពសមរម្យ។</li>
+      <li>ទំនាក់ទំនងច្បាស់លាស់ និងគោរពជាមួយអតិថិជន។</li>
+      <li>អនុលោមតាមច្បាប់ និងបទប្បញ្ញត្តិទាំងអស់នៅកម្ពុជាដែលទាក់ទងនឹងសេវាកម្មរបស់អ្នក។</li>
+      <li>រក្សាអាជ្ញាប័ណ្ណ ឬវិញ្ញាបនប័ត្រណាមួយដែលតម្រូវសម្រាប់សេវាកម្មរបស់អ្នក។</li>
+    </ul>
+    <div class="callout callout-warning">
+      <strong>សំខាន់៖</strong> កុំបង្វែរប្រព័ន្ធទូទាត់របស់ FixIt ដើម្បីគេចពីកម្រៃជើងសារ។ នេះរួមទាំងការណែនាំអតិថិជនឱ្យបង់ប្រាក់ដោយផ្ទាល់ដល់អ្នកសម្រាប់ការកក់ដែលរៀបចំតាមរយៈវេទិកា។ ការបំពានលក្ខខណ្ឌនេះអាចនាំឱ្យមានការ<strong>ផ្អាកគណនីជាអចិន្ត្រៃយ៍</strong>។
+    </div>
+
+    <h2>១០. កាតព្វកិច្ចអតិថិជន</h2>
+    <p>ក្នុងនាមជាអតិថិជននៅលើ FixIt អ្នកយល់ព្រម៖</p>
+    <ul>
+      <li>ផ្តល់ព័ត៌មានការកក់ត្រឹមត្រូវ រួមទាំងទីតាំង និងតម្រូវការសេវាកម្មរបស់អ្នក។</li>
+      <li>មានវត្តមាននៅទីតាំង និងពេលវេលាដែលបានព្រមព្រៀងសម្រាប់ការណាត់ជួបសេវាកម្មរបស់អ្នក។</li>
+      <li>បង់ថ្លៃសេវាកម្មតាមរយៈប្រព័ន្ធទូទាត់របស់ FixIt ដូចដែលបានពិពណ៌នាក្នុងលក្ខខណ្ឌទាំងនេះ។</li>
+      <li>ទុកការវាយតម្លៃដោយស្មោះត្រង់ផ្អែកលើបទពិសោធន៍សេវាកម្មជាក់ស្តែងរបស់អ្នក។ ការវាយតម្លៃមិនពិត បំភ្លើង ឬព្យាបាទអាចនាំឱ្យមានការផ្អាកគណនី។</li>
+      <li>ប្រព្រឹត្តចំពោះអ្នកផ្តល់សេវាដោយការគោរព និងសុជីវធម៌។</li>
+    </ul>
+
+    <h2>១១. ការកំណត់ការទទួលខុសត្រូវ</h2>
+    <ul>
+      <li>FixIt គឺជា<strong>វេទិកាទីផ្សារតែប៉ុណ្ណោះ</strong>។ យើងមិនធានាគុណភាព សុវត្ថិភាព ពេលវេលា ឬលទ្ធផលនៃសេវាកម្មណាមួយដែលផ្តល់ដោយអ្នកផ្តល់សេវាឯករាជ្យឡើយ។</li>
+      <li>FixIt មិនទទួលខុសត្រូវចំពោះការខូចខាត របួស ការបាត់បង់ ឬវិវាទណាមួយដែលកើតឡើងពីសេវាកម្មដែលរៀបចំតាមរយៈវេទិកាឡើយ។</li>
+      <li>FixIt មិនផ្តល់ការធានាប្រភេទណាមួយ មិនថាច្បាស់លាស់ ឬដោយបង្កប់ន័យ ទាក់ទងនឹងសេវាកម្មដែលបានចុះបញ្ជីនៅលើវេទិកាឡើយ។</li>
+      <li>ការទទួលខុសត្រូវសរុបរបស់យើងចំពោះអ្នកសម្រាប់ការទាមទារណាមួយដែលកើតឡើងពីការប្រើប្រាស់ FixIt របស់អ្នកនឹងមិនលើសពីចំនួនដែលអ្នកបានបង់តាមរយៈវេទិកាក្នុងរយៈពេល ៣ ខែមុនការទាមទារឡើយ។</li>
+      <li>FixIt មិនទទួលខុសត្រូវចំពោះការរអាក់រអួលសេវាកម្ម បញ្ហាបច្ចេកទេស ឬការបាត់បង់ទិន្នន័យលើសពីការគ្រប់គ្រងសមរម្យរបស់យើងឡើយ។</li>
+    </ul>
+
+    <h2>១២. ការដោះស្រាយវិវាទ</h2>
+    <ul>
+      <li>ប្រសិនបើវិវាទកើតឡើងរវាងអតិថិជន និងអ្នកផ្តល់សេវា យើងលើកទឹកចិត្តឱ្យភាគីទាំងពីរទំនាក់ទំនងដោយផ្ទាល់ និងព្យាយាមដោះស្រាយបញ្ហាដោយមិត្តភាព។</li>
+      <li>ភាគីណាមួយអាចទាក់ទង FixIt នៅ <a href="mailto:fixitkh26@gmail.com">fixitkh26@gmail.com</a> ដើម្បីរាយការណ៍វិវាទ។ FixIt អាច តាមការសម្រេចចិត្តរបស់ខ្លួន ពិនិត្យស្ថានភាព និងសម្រុះសម្រួល ប៉ុន្តែ<strong>មិនមានកាតព្វកិច្ច</strong>ក្នុងការដោះស្រាយវិវាទរវាងអ្នកប្រើប្រាស់ឡើយ។</li>
+      <li>ការសម្រេចចិត្តរបស់ FixIt ក្នុងវិវាទដែលបានសម្រុះសម្រួលគឺជាចុងក្រោយ។</li>
+      <li>សម្រាប់វិវាទដែលមិនបានដោះស្រាយ ភាគីអាចស្វែងរកការដោះស្រាយតាមរយៈបណ្តាញផ្លូវច្បាប់សមស្របនៅកម្ពុជា។</li>
+    </ul>
+
+    <h2>១៣. ការបញ្ចប់គណនី</h2>
+    <p>FixIt រក្សាសិទ្ធិក្នុងការផ្អាក ឬបញ្ចប់គណនីជាអចិន្ត្រៃយ៍ដែល៖</p>
+    <ul>
+      <li>បំពានលក្ខខណ្ឌនៃសេវាកម្មទាំងនេះ។</li>
+      <li>ចូលរួមក្នុងសកម្មភាពក្លែងបន្លំ បោកប្រាស់ ឬខុសច្បាប់។</li>
+      <li>បង្វែរប្រព័ន្ធទូទាត់របស់ FixIt ដើម្បីគេចពីកម្រៃជើងសារ។</li>
+      <li>ទទួលការវាយតម្លៃអវិជ្ជមាន ឬបណ្តឹងជាប់ជារឿយៗពីអ្នកប្រើប្រាស់ផ្សេងទៀត។</li>
+      <li>ប៉ះពាល់ដល់កេរ្តិ៍ឈ្មោះ សុវត្ថិភាព ឬភាពត្រឹមត្រូវនៃវេទិកា FixIt។</li>
+      <li>នៅទំនេរអស់រយៈពេលវែង (ជាមួយការជូនដំណឹងជាមុន)។</li>
+    </ul>
+    <p>អ្នកក៏អាចបិទគណនីរបស់អ្នកដោយស្ម័គ្រចិត្តនៅពេលណាក៏បានដោយប្រើជម្រើស <strong>"លុបគណនី"</strong> នៅក្នុងការកំណត់ប្រវត្តិរូបក្នុងកម្មវិធី ឬដោយទាក់ទងមកយើងនៅ <a href="mailto:fixitkh26@gmail.com">fixitkh26@gmail.com</a>។ នៅពេលបិទគណនី សមតុល្យដែលនៅសល់នឹងត្រូវបានដំណើរការតាមនីតិវិធីដកប្រាក់ស្តង់ដាររបស់យើង។</p>
+
+    <h2>១៤. ការកែប្រែលក្ខខណ្ឌ</h2>
+    <ul>
+      <li>FixIt អាចធ្វើការកែរលក្ខខណ្ឌនៃសេវាកម្មទាំងនេះម្តងម្កាល។</li>
+      <li>យើងនឹងជូនដំណឹងដល់អ្នកប្រើប្រាស់អំពីការផ្លាស់ប្តូរសំខាន់ៗតាមរយៈកម្មវិធី ឬតាមអ៊ីមែល។</li>
+      <li>ការបន្តប្រើប្រាស់ FixIt បន្ទាប់ពីការផ្លាស់ប្តូរត្រូវបានបង្ហោះ គឺជាការយល់ព្រមរបស់អ្នកចំពោះលក្ខខណ្ឌដែលបានធ្វើការផ្លាស់ប្តូរ។</li>
+      <li>ប្រសិនបើអ្នកមិនយល់ព្រមជាមួយលក្ខខណ្ឌដែលបានធ្វើការផ្លាស់ប្តូរ អ្នកគួរឈប់ប្រើប្រាស់វេទិកា និងបិទគណនីរបស់អ្នក។</li>
+    </ul>
+
+    <h2>១៥. ទំនាក់ទំនងយើង</h2>
+    <p>ប្រសិនបើអ្នកមានសំណួរអំពីលក្ខខណ្ឌនៃសេវាកម្មទាំងនេះ សូមទាក់ទងមកយើង៖</p>
+    <div class="contact-card">
+      <h3>FixIt Cambodia</h3>
+      <p>
+        អ៊ីមែល៖ <a href="mailto:fixitkh26@gmail.com">fixitkh26@gmail.com</a><br>
+        ជំនួយ៖ <a href="mailto:fixitsupport.kh@gmail.com
+        ">support@fixit.com.kh</a>
+      </p>
+    </div>
+
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p data-lang="en">&copy; 2026 FixIt Cambodia. All rights reserved.</p>
+    <p data-lang="km">&copy; 2026 FixIt Cambodia។ រក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
+    <p style="margin-top: 8px;" data-lang="en">
+      <a href="terms.html">Terms of Service</a> &nbsp;&middot;&nbsp;
+      <a href="privacy.html">Privacy Policy</a>
+    </p>
+    <p style="margin-top: 8px;" data-lang="km">
+      <a href="terms.html">លក្ខខណ្ឌនៃសេវាកម្ម</a> &nbsp;&middot;&nbsp;
+      <a href="privacy.html">គោលការណ៍ឯកជនភាព</a>
+    </p>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.body.classList.toggle('km', lang === 'km');
+      document.documentElement.lang = lang;
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-km').classList.toggle('active', lang === 'km');
+      localStorage.setItem('fixit-lang', lang);
+    }
+    (function() {
+      var saved = localStorage.getItem('fixit-lang');
+      if (saved === 'km') setLang('km');
+    })();
+  </script>
+
+</body>
+</html>

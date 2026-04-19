@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal — FixIt Cambodia</title>
+  <meta name="description" content="FixIt Cambodia legal documents — Terms of Service and Privacy Policy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kantumruy+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --green: #2ECC71;
+      --green-dark: #27AE60;
+      --green-light: #E8F8F0;
+      --charcoal: #1A1A2E;
+      --text: #2D3436;
+      --text-secondary: #636E72;
+      --border: #E9ECEF;
+      --bg: #FFFFFF;
+      --bg-alt: #F8F9FA;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    body.km {
+      font-family: 'Kantumruy Pro', 'Inter', sans-serif;
+    }
+
+    [data-lang="km"] { display: none; }
+    body.km [data-lang="km"] { display: block; }
+    body.km [data-lang="en"] { display: none; }
+
+    span[data-lang="km"] { display: none; }
+    body.km span[data-lang="km"] { display: inline; }
+    body.km span[data-lang="en"] { display: none; }
+
+    a[data-lang="km"] { display: none; }
+    body.km a[data-lang="km"] { display: block; }
+    body.km a[data-lang="en"] { display: none; }
+
+    .header {
+      background: var(--charcoal);
+      padding: 20px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .header-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .logo-fix { color: var(--green); }
+    .logo-it { color: #FFFFFF; }
+
+    .lang-toggle {
+      display: flex;
+      gap: 4px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 3px;
+    }
+    .lang-btn {
+      border: none;
+      background: transparent;
+      color: rgba(255,255,255,0.6);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+    .lang-btn.active {
+      background: var(--green);
+      color: #FFFFFF;
+    }
+    .lang-btn:hover:not(.active) {
+      color: #FFFFFF;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--charcoal) 0%, #16213E 100%);
+      padding: 64px 24px 56px;
+      text-align: center;
+    }
+    .hero h1 {
+      color: #FFFFFF;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .hero .subtitle {
+      color: rgba(255,255,255,0.6);
+      font-size: 15px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .content {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+      flex: 1;
+      width: 100%;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 24px;
+      text-decoration: none;
+      color: var(--text);
+      transition: all 0.2s ease;
+    }
+    .card:hover {
+      border-color: var(--green);
+      box-shadow: 0 4px 20px rgba(46, 204, 113, 0.12);
+      transform: translateY(-2px);
+    }
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(46, 204, 113, 0.12);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      font-size: 22px;
+    }
+    .card h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+      border: none;
+      padding: 0;
+    }
+    .card p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .footer {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+    .footer a {
+      color: var(--green-dark);
+      font-weight: 500;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .footer a:hover { color: var(--green); }
+
+    @media (max-width: 520px) {
+      .card-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo"><span class="logo-fix">Fix</span><span class="logo-it">It</span></a>
+      <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('en')" id="btn-en">EN</button>
+        <button class="lang-btn" onclick="setLang('km')" id="btn-km">&#6017;&#6098;&#6040;&#6082;&#6042;</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1 data-lang="en">Legal</h1>
+    <h1 data-lang="km">&#6039;&#6016;&#6047;&#6070;&#6042;&#6037;&#6098;&#6043;&#6076;&#6044;&#6016;&#6070;&#6042;</h1>
+    <p class="subtitle" data-lang="en">Policies and guidelines for using the FixIt platform in Cambodia</p>
+    <p class="subtitle" data-lang="km">&#6018;&#6084;&#6043;&#6016;&#6070;&#6042;&#6030;&#6093; &#6035;&#6071;&#6020;&#6016;&#6070;&#6042;&#6030;&#6082;&#6035;&#6070;&#6086;&#6047;&#6040;&#6098;&#6042;&#6070;&#6036;&#6091;&#6016;&#6070;&#6042;&#6036;&#6098;&#6042;&#6078;&#6036;&#6098;&#6042;&#6070;&#6047;&#6091;&#6044;&#6081;&#6033;&#6071;&#6016;&#6070; FixIt &#6035;&#6085;&#6016;&#6040;&#6098;&#6038;&#6075;&#6023;&#6070;</p>
+  </section>
+
+  <main class="content">
+    <div class="card-grid">
+      <a href="terms.html" class="card" data-lang="en">
+        <div class="card-icon">&#128203;</div>
+        <h2>Terms of Service</h2>
+        <p>Rules, obligations, and guidelines for customers and providers using FixIt.</p>
+      </a>
+      <a href="terms.html" class="card" data-lang="km">
+        <div class="card-icon">&#128203;</div>
+        <h2>&#6043;&#6016;&#6098;&#6017;&#6017;&#6030;&#6098;&#6028;&#6035;&#6083;&#6047;&#6081;&#6044;&#6070;&#6016;&#6040;&#6098;&#6040;</h2>
+        <p>&#6021;&#6098;&#6036;&#6070;&#6036;&#6091; &#6016;&#6070;&#6031;&#6038;&#6098;&#6044;&#6016;&#6071;&#6021;&#6098;&#6021; &#6035;&#6071;&#6020;&#6016;&#6070;&#6042;&#6030;&#6082;&#6035;&#6070;&#6086;&#6047;&#6040;&#6098;&#6042;&#6070;&#6036;&#6091;&#6050;&#6031;&#6071;&#6032;&#6071;&#6023;&#6035; &#6035;&#6071;&#6020;&#6050;&#6098;&#6035;&#6016;&#6037;&#6098;&#6031;&#6043;&#6091;&#6047;&#6081;&#6044;&#6070;&#6026;&#6082;&#6043;&#6036;&#6098;&#6042;&#6078;&#6036;&#6098;&#6042;&#6070;&#6047;&#6091; FixIt&#6100;</p>
+      </a>
+      <a href="privacy.html" class="card" data-lang="en">
+        <div class="card-icon">&#128274;</div>
+        <h2>Privacy Policy</h2>
+        <p>How we collect, use, store, and protect your personal information.</p>
+      </a>
+      <a href="privacy.html" class="card" data-lang="km">
+        <div class="card-icon">&#128274;</div>
+        <h2>&#6018;&#6084;&#6043;&#6016;&#6070;&#6042;&#6030;&#6093;&#6039;&#6016;&#6023;&#6035;&#6039;&#6070;&#6038;</h2>
+        <p>&#6042;&#6036;&#6080;&#6036;&#6026;&#6082;&#6043;&#6041;&#6078;&#6020;&#6036;&#6098;&#6042;&#6040;&#6076;&#6043; &#6036;&#6098;&#6042;&#6078;&#6036;&#6098;&#6042;&#6070;&#6047;&#6091; &#6042;&#6016;&#6098;&#6047;&#6070;&#6033;&#6075;&#6016; &#6035;&#6071;&#6020;&#6016;&#6070;&#6042;&#6038;&#6070;&#6042;&#6038;&#6090;&#6031;&#6040;&#6070;&#6035;&#6037;&#6098;&#6033;&#6070;&#6043;&#6091;&#6017;&#6098;&#6043;&#6077;&#6035;&#6042;&#6036;&#6047;&#6091;&#6050;&#6098;&#6035;&#6016;&#6100;</p>
+      </a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p data-lang="en">&copy; 2026 FixIt Cambodia. All rights reserved.</p>
+    <p data-lang="km">&copy; 2026 FixIt Cambodia&#6100; &#6042;&#6016;&#6098;&#6047;&#6070;&#6047;&#6071;&#6033;&#6098;&#6034;&#6071;&#6018;&#6098;&#6042;&#6036;&#6091;&#6041;&#6089;&#6070;&#6020;&#6100;</p>
+    <p style="margin-top: 8px;" data-lang="en">
+      <a href="terms.html">Terms of Service</a> &nbsp;&middot;&nbsp;
+      <a href="privacy.html">Privacy Policy</a>
+    </p>
+    <p style="margin-top: 8px;" data-lang="km">
+      <a href="terms.html">&#6043;&#6016;&#6098;&#6017;&#6017;&#6030;&#6098;&#6028;&#6035;&#6083;&#6047;&#6081;&#6044;&#6070;&#6016;&#6040;&#6098;&#6040;</a> &nbsp;&middot;&nbsp;
+      <a href="privacy.html">&#6018;&#6084;&#6043;&#6016;&#6070;&#6042;&#6030;&#6093;&#6039;&#6016;&#6023;&#6035;&#6039;&#6070;&#6038;</a>
+    </p>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.body.classList.toggle('km', lang === 'km');
+      document.documentElement.lang = lang;
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-km').classList.toggle('active', lang === 'km');
+      localStorage.setItem('fixit-lang', lang);
+    }
+    (function() {
+      var saved = localStorage.getItem('fixit-lang');
+      if (saved === 'km') setLang('km');
+    })();
+  </script>
+
+</body>
+</html>

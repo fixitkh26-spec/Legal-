@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — FixIt Cambodia</title>
+  <meta name="description" content="FixIt Cambodia Privacy Policy. Learn how we collect, use, and protect your data.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kantumruy+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --green: #2ECC71;
+      --green-dark: #27AE60;
+      --green-light: #E8F8F0;
+      --charcoal: #1A1A2E;
+      --text: #2D3436;
+      --text-secondary: #636E72;
+      --border: #E9ECEF;
+      --bg: #FFFFFF;
+      --bg-alt: #F8F9FA;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body.km {
+      font-family: 'Kantumruy Pro', 'Inter', sans-serif;
+    }
+
+    [data-lang="km"] { display: none; }
+    body.km [data-lang="km"] { display: block; }
+    body.km [data-lang="en"] { display: none; }
+
+    span[data-lang="km"] { display: none; }
+    body.km span[data-lang="km"] { display: inline; }
+    body.km span[data-lang="en"] { display: none; }
+
+    .header {
+      background: var(--charcoal);
+      padding: 20px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .header-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .logo-fix { color: var(--green); }
+    .logo-it { color: #FFFFFF; }
+    .header-nav a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .header-nav a:hover { color: #FFFFFF; }
+
+    .lang-toggle {
+      display: flex;
+      gap: 4px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 3px;
+    }
+    .lang-btn {
+      border: none;
+      background: transparent;
+      color: rgba(255,255,255,0.6);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+    .lang-btn.active {
+      background: var(--green);
+      color: #FFFFFF;
+    }
+    .lang-btn:hover:not(.active) {
+      color: #FFFFFF;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--charcoal) 0%, #16213E 100%);
+      padding: 56px 24px 48px;
+      text-align: center;
+    }
+    .hero h1 {
+      color: #FFFFFF;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .hero .subtitle {
+      color: rgba(255,255,255,0.6);
+      font-size: 15px;
+    }
+    .hero .effective {
+      display: inline-block;
+      margin-top: 16px;
+      background: rgba(46,204,113,0.15);
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 20px;
+    }
+
+    .content {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-top: 48px;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--green-light);
+    }
+    h2:first-of-type { margin-top: 0; }
+
+    h3 {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+
+    p { margin-bottom: 16px; }
+
+    ul {
+      margin-bottom: 16px;
+      padding-left: 0;
+      list-style: none;
+    }
+    ul li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 10px;
+    }
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 8px;
+      height: 8px;
+      background: var(--green);
+      border-radius: 50%;
+    }
+
+    strong { color: var(--charcoal); font-weight: 600; }
+
+    a {
+      color: var(--green-dark);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    a:hover { color: var(--green); }
+
+    .callout {
+      background: var(--green-light);
+      border-left: 4px solid var(--green);
+      padding: 16px 20px;
+      border-radius: 0 10px 10px 0;
+      margin: 20px 0;
+      font-size: 15px;
+    }
+
+    .contact-card {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      margin-top: 24px;
+    }
+    .contact-card h3 { margin-top: 0; font-size: 18px; }
+    .contact-card a { color: var(--green-dark); font-weight: 500; }
+
+    .footer {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+    .footer a { color: var(--green-dark); font-weight: 500; }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      .content { padding: 32px 20px 60px; }
+      .header-inner { flex-wrap: wrap; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="index.html" class="logo"><span class="logo-fix">Fix</span><span class="logo-it">It</span></a>
+        <nav class="header-nav">
+          <a href="terms.html">
+            <span data-lang="en">Terms of Service</span>
+            <span data-lang="km">លក្ខខណ្ឌនៃសេវាកម្ម</span>
+          </a>
+        </nav>
+      </div>
+      <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('en')" id="btn-en">EN</button>
+        <button class="lang-btn" onclick="setLang('km')" id="btn-km">ខ្មែរ</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1 data-lang="en">Privacy Policy</h1>
+    <h1 data-lang="km">គោលការណ៍ឯកជនភាព</h1>
+    <p class="subtitle" data-lang="en">How we collect, use, and protect your information</p>
+    <p class="subtitle" data-lang="km">របៀបដែលយើងប្រមូល ប្រើប្រាស់ និងការពារព័ត៌មានរបស់អ្នក</p>
+    <span class="effective" data-lang="en">Effective April 2026</span>
+    <span class="effective" data-lang="km">ចូលជាធរមាន ខែមេសា ២០២៦</span>
+  </section>
+
+  <main class="content">
+
+    <!-- ==================== ENGLISH ==================== -->
+    <div data-lang="en">
+
+    <h2>1. Introduction</h2>
+    <p>FixIt ("we," "our," or "us") is committed to protecting your personal information. This Privacy Policy explains what data we collect, how we use it, and your rights regarding your information.</p>
+    <p>FixIt is a mobile marketplace connecting customers with AC service providers in Cambodia. By using FixIt, you consent to the data practices described in this policy.</p>
+
+    <h2>2. Data We Collect</h2>
+    <p>We collect the following types of information when you use FixIt:</p>
+
+    <h3>Account Information</h3>
+    <ul>
+      <li>Full name</li>
+      <li>Phone number</li>
+      <li>Email address</li>
+      <li>Profile photo (if uploaded)</li>
+      <li>Account type (customer or provider)</li>
+    </ul>
+
+    <h3>Location Data</h3>
+    <ul>
+      <li>Your real-time location when using the app, used to find nearby providers and calculate distances.</li>
+      <li>The service address you provide when placing a booking.</li>
+    </ul>
+
+    <h3>Booking Data</h3>
+    <ul>
+      <li>Service requests and booking history</li>
+      <li>Messages between customers and providers</li>
+      <li>Payment confirmations and transaction records</li>
+      <li>Reviews and ratings</li>
+    </ul>
+
+    <h3>Device Information</h3>
+    <ul>
+      <li>Push notification tokens (used to send you booking updates and notifications)</li>
+      <li>Device type and operating system (collected automatically by the app platform)</li>
+    </ul>
+
+    <h3>Provider-Specific Data</h3>
+    <ul>
+      <li>Services offered and pricing</li>
+      <li>Service areas and availability</li>
+      <li>Earnings and withdrawal history</li>
+    </ul>
+
+    <h2>3. How We Use Your Data</h2>
+    <p>We use the information we collect to:</p>
+    <ul>
+      <li><strong>Match customers with nearby providers</strong> based on location and service needs.</li>
+      <li><strong>Process bookings</strong> — create, manage, and track service requests.</li>
+      <li><strong>Process payments</strong> — record transactions, calculate commissions, and manage provider earnings and withdrawals.</li>
+      <li><strong>Send push notifications</strong> — booking updates, payment confirmations, and important service alerts.</li>
+      <li><strong>Enable communication</strong> between customers and providers for booking coordination.</li>
+      <li><strong>Display reviews and ratings</strong> to help users make informed decisions.</li>
+      <li><strong>Improve the platform</strong> — analyze usage patterns to enhance features and user experience.</li>
+      <li><strong>Ensure safety and security</strong> — detect and prevent fraud, abuse, or violations of our Terms of Service.</li>
+    </ul>
+
+    <h2>4. Third-Party Services</h2>
+    <p>FixIt uses the following third-party services to operate the platform:</p>
+
+    <h3>Supabase</h3>
+    <ul>
+      <li><strong>Purpose:</strong> Database, user authentication, and backend infrastructure.</li>
+      <li><strong>Data shared:</strong> All account data, booking data, and transaction records are stored in Supabase.</li>
+      <li><strong>Security:</strong> Supabase provides row-level security (RLS) policies to ensure users can only access data they are authorized to see.</li>
+    </ul>
+    <div class="callout">
+      Supabase servers are located <strong>outside of Cambodia</strong>. By using FixIt, you consent to your data being transferred to and stored on servers outside the Kingdom of Cambodia.
+    </div>
+
+    <h3>Expo (Push Notifications)</h3>
+    <ul>
+      <li><strong>Purpose:</strong> Delivering push notifications to your device.</li>
+      <li><strong>Data shared:</strong> Push notification tokens and notification content (e.g., "Your booking has been accepted").</li>
+    </ul>
+
+    <h3>Google Maps</h3>
+    <ul>
+      <li><strong>Purpose:</strong> Displaying maps, calculating distances, and providing location-based services within the app.</li>
+      <li><strong>Data shared:</strong> Location coordinates for map display and distance calculations.</li>
+      <li><strong>Privacy:</strong> Google Maps is subject to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+    </ul>
+
+    <p><strong>We do not sell your personal data to any third party.</strong></p>
+
+    <h2>5. Data Storage and Security</h2>
+    <ul>
+      <li>Your data is stored securely using <strong>Supabase infrastructure</strong> with row-level security (RLS) policies that restrict data access at the database level.</li>
+      <li>All data transmitted between the app and our servers uses <strong>industry-standard encryption</strong> (HTTPS/TLS).</li>
+      <li>Profile photos and uploaded images are stored in secure cloud storage with access controls.</li>
+      <li>We regularly review our security practices, but no system is completely immune to risk. We encourage you to protect your account credentials.</li>
+    </ul>
+
+    <h2>6. Data Retention</h2>
+    <ul>
+      <li><strong>Active accounts:</strong> We retain your data for as long as your account remains active.</li>
+      <li><strong>Closed accounts:</strong> If you close your account or request deletion, we will remove your personal data within a reasonable timeframe, except where retention is required for legal or regulatory compliance, financial record-keeping, or resolving disputes.</li>
+      <li><strong>Booking and transaction records</strong> may be retained in anonymized or aggregated form for business analytics even after account deletion.</li>
+    </ul>
+
+    <h2>7. Your Rights</h2>
+
+    <h3>Access</h3>
+    <p>You may request a copy of the personal data we hold about you by contacting us.</p>
+
+    <h3>Correction</h3>
+    <p>You can update most of your account information directly in the app (name, phone, email, profile photo). For corrections to other data, contact us and we will update it promptly.</p>
+
+    <h3>Deletion</h3>
+    <p>You can delete your account directly in the app by going to <strong>Profile &gt; Delete Account</strong>. Alternatively, you may request deletion by emailing us at <a href="mailto:fixitkh26@gmail.com">fixitkh26@gmail.com</a>. Upon deletion, we will remove your personal data except where retention is legally required (see Data Retention above). Please note that deleting your account is permanent and cannot be undone.</p>
+
+    <h3>Notification Preferences</h3>
+    <p>You can manage push notification permissions through your device settings.</p>
+
+    <h2>8. Children's Privacy</h2>
+    <p>FixIt is intended for users who are <strong>18 years of age or older</strong>. We do not knowingly collect personal information from anyone under 18.</p>
+    <p>If we become aware that we have collected data from a person under 18, we will take steps to delete that information promptly. If you believe a minor has provided us with their data, please contact us immediately.</p>
+
+    <h2>9. International Data Transfers</h2>
+    <p>FixIt operates in Cambodia, but our backend infrastructure (Supabase) is hosted on servers located <strong>outside of Cambodia</strong>. By using FixIt, you acknowledge and consent to your personal data being transferred to, stored, and processed in countries outside the Kingdom of Cambodia.</p>
+    <p>We ensure that our third-party service providers maintain appropriate security standards to protect your data regardless of where it is stored.</p>
+
+    <h2>10. Changes to This Policy</h2>
+    <ul>
+      <li>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, or legal requirements.</li>
+      <li>We will notify users of significant changes through the app or via email.</li>
+      <li>The "Last Updated" date at the top of this policy will be revised accordingly.</li>
+      <li>Continued use of FixIt after changes are posted constitutes your acceptance of the updated policy.</li>
+    </ul>
+
+    <h2>11. Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy or wish to exercise your data rights, please contact us:</p>
+    <div class="contact-card">
+      <h3>FixIt Cambodia</h3>
+      <p>
+        Email: <a href="mailto:fixitkh26@gmail.com">fixitkh26@gmail.com</a><br>
+        Support: <a href="mailto:fixitsupport.kh@gmail.com">fixitsupport.kh@gmail.com</a>
+      </p>
+    </div>
+
+    </div>
+
+    <!-- ==================== KHMER ==================== -->
+    <div data-lang="km">
+
+    <h2>១. សេចក្តីផ្តើម</h2>
+    <p>FixIt ("យើង" "របស់យើង" ឬ "យើងខ្ញុំ") ប្តេជ្ញាការពារព័ត៌មានផ្ទាល់ខ្លួនរបស់អ្នក។ គោលការណ៍ឯកជនភាពនេះពន្យល់ពីទិន្នន័យដែលយើងប្រមូល របៀបដែលយើងប្រើប្រាស់វា និងសិទ្ធិរបស់អ្នកទាក់ទងនឹងព័ត៌មានរបស់អ្នក។</p>
+    <p>FixIt គឺជាទីផ្សារចល័តដែលភ្ជាប់អតិថិជនជាមួយអ្នកផ្តល់សេវាម៉ាស៊ីនត្រជាក់នៅកម្ពុជា។ ដោយការប្រើប្រាស់ FixIt អ្នកយល់ព្រមលើការអនុវត្តទិន្នន័យដែលបានពិពណ៌នាក្នុងគោលការណ៍នេះ។</p>
+
+    <h2>២. ទិន្នន័យដែលយើងប្រមូល</h2>
+    <p>យើងប្រមូលប្រភេទព័ត៌មានដូចខាងក្រោមនៅពេលអ្នកប្រើប្រាស់ FixIt៖</p>
+
+    <h3>ព័ត៌មានគណនី</h3>
+    <ul>
+      <li>ឈ្មោះពេញ</li>
+      <li>លេខទូរសព្ទ</li>
+      <li>អាសយដ្ឋានអ៊ីមែល</li>
+      <li>រូបថតប្រវត្តិរូប (បើបានផ្ទុកឡើង)</li>
+      <li>ប្រភេទគណនី (អតិថិជន ឬអ្នកផ្តល់សេវា)</li>
+    </ul>
+
+    <h3>ទិន្នន័យទីតាំង</h3>
+    <ul>
+      <li>ទីតាំងបច្ចុប្បន្នរបស់អ្នកនៅពេលប្រើប្រាស់កម្មវិធី ដែលប្រើដើម្បីស្វែងរកអ្នកផ្តល់សេវាដែលនៅជិត និងគណនាចម្ងាយ។</li>
+      <li>អាសយដ្ឋានសេវាកម្មដែលអ្នកផ្តល់នៅពេលធ្វើការកក់។</li>
+    </ul>
+
+    <h3>ទិន្នន័យការកក់</h3>
+    <ul>
+      <li>សំណើសេវាកម្ម និងប្រវត្តិការកក់</li>
+      <li>សារវារវាងអតិថិជន និងអ្នកផ្តល់សេវា</li>
+      <li>ការបញ្ជាក់ការទូទាត់ និងកំណត់ត្រាប្រតិបត្តិការ</li>
+      <li>ការវាយតម្លៃ និងពិន្ទុ</li>
+    </ul>
+
+    <h3>ព័ត៌មានឧបករណ៍</h3>
+    <ul>
+      <li>សញ្ញាសម្គាល់ការជូនដំណឹង (ប្រើដើម្បីផ្ញើបច្ចុប្បន្នភាពការកក់ និងការជូនដំណឹងដល់អ្នក)</li>
+      <li>ប្រភេទឧបករណ៍ និងប្រព័ន្ធប្រតិបត្តិការ (ប្រមូលដោយស្វ័យប្រវត្តិដោយវេទិកាកម្មវិធី)</li>
+    </ul>
+
+    <h3>ទិន្នន័យជាក់លាក់សម្រាប់អ្នកផ្តល់សេវា</h3>
+    <ul>
+      <li>សេវាកម្មដែលផ្តល់ជូន និងតម្លៃ</li>
+      <li>តំបន់សេវាកម្ម និងភាពអាចរកបាន</li>
+      <li>ប្រាក់ចំណូល និងប្រវត្តិការដកប្រាក់</li>
+    </ul>
+
+    <h2>៣. របៀបដែលយើងប្រើទិន្នន័យរបស់អ្នក</h2>
+    <p>យើងប្រើព័ត៌មានដែលយើងប្រមូលដើម្បី៖</p>
+    <ul>
+      <li><strong>ផ្គូផ្គងអតិថិជនជាមួយអ្នកផ្តល់សេវាដែលនៅជិត</strong> ដោយផ្អែកលើទីតាំង និងតម្រូវការសេវាកម្ម។</li>
+      <li><strong>ដំណើរការការកក់</strong> — បង្កើត គ្រប់គ្រង និងតាមដានសំណើសេវាកម្ម។</li>
+      <li><strong>ដំណើរការការទូទាត់</strong> — កត់ត្រាប្រតិបត្តិការ គណនាកម្រៃជើងសារ និងគ្រប់គ្រងប្រាក់ចំណូល និងការដកប្រាក់របស់អ្នកផ្តល់សេវា។</li>
+      <li><strong>ផ្ញើការជូនដំណឹង</strong> — បច្ចុប្បន្នភាពការកក់ ការបញ្ជាក់ការទូទាត់ និងការជូនដំណឹងសំខាន់ៗ។</li>
+      <li><strong>អនុញ្ញាតការទំនាក់ទំនង</strong> រវាងអតិថិជន និងអ្នកផ្តល់សេវាសម្រាប់ការសម្របសម្រួលការកក់។</li>
+      <li><strong>បង្ហាញការវាយតម្លៃ និងពិន្ទុ</strong> ដើម្បីជួយអ្នកប្រើប្រាស់ធ្វើការសម្រេចចិត្តដែលមានព័ត៌មានគ្រប់គ្រាន់។</li>
+      <li><strong>កែលម្អវេទិកា</strong> — វិភាគគំរូការប្រើប្រាស់ដើម្បីបង្កើនលក្ខណៈពិសេស និងបទពិសោធន៍អ្នកប្រើប្រាស់។</li>
+      <li><strong>ធានាសុវត្ថិភាព និងសន្តិសុខ</strong> — រកឃើញ និងការពារការក្លែងបន្លំ ការរំលោភបំពាន ឬការបំពានលក្ខខណ្ឌនៃសេវាកម្មរបស់យើង។</li>
+    </ul>
+
+    <h2>៤. សេវាកម្មភាគីទីបី</h2>
+    <p>FixIt ប្រើប្រាស់សេវាកម្មភាគីទីបីដូចខាងក្រោមដើម្បីដំណើរការវេទិកា៖</p>
+
+    <h3>Supabase</h3>
+    <ul>
+      <li><strong>គោលបំណង៖</strong> មូលដ្ឋានទិន្នន័យ ការផ្ទៀងផ្ទាត់អ្នកប្រើប្រាស់ និងហេដ្ឋារចនាសម្ព័ន្ធ backend។</li>
+      <li><strong>ទិន្នន័យចែករំលែក៖</strong> ទិន្នន័យគណនីទាំងអស់ ទិន្នន័យការកក់ និងកំណត់ត្រាប្រតិបត្តិការត្រូវបានរក្សាទុកនៅក្នុង Supabase។</li>
+      <li><strong>សុវត្ថិភាព៖</strong> Supabase ផ្តល់គោលការណ៍សុវត្ថិភាពកម្រិតជួរដេក (RLS) ដើម្បីធានាថាអ្នកប្រើប្រាស់អាចចូលប្រើទិន្នន័យដែលពួកគេមានសិទ្ធិមើលតែប៉ុណ្ណោះ។</li>
+    </ul>
+    <div class="callout">
+      ម៉ាស៊ីនមេ Supabase មានទីតាំងនៅ<strong>ក្រៅប្រទេសកម្ពុជា</strong>។ ដោយការប្រើប្រាស់ FixIt អ្នកយល់ព្រមឱ្យទិន្នន័យរបស់អ្នកត្រូវបានផ្ទេរទៅ និងរក្សាទុកនៅលើម៉ាស៊ីនមេនៅក្រៅព្រះរាជាណាចក្រកម្ពុជា។
+    </div>
+
+    <h3>Expo (ការជូនដំណឹង)</h3>
+    <ul>
+      <li><strong>គោលបំណង៖</strong> បញ្ជូនការជូនដំណឹងទៅឧបករណ៍របស់អ្នក។</li>
+      <li><strong>ទិន្នន័យចែករំលែក៖</strong> សញ្ញាសម្គាល់ការជូនដំណឹង និងខ្លឹមសារការជូនដំណឹង (ឧ. "ការកក់របស់អ្នកត្រូវបានទទួលយក")។</li>
+    </ul>
+
+    <h3>Google Maps</h3>
+    <ul>
+      <li><strong>គោលបំណង៖</strong> បង្ហាញផែនទី គណនាចម្ងាយ និងផ្តល់សេវាកម្មដែលមានមូលដ្ឋានលើទីតាំងនៅក្នុងកម្មវិធី។</li>
+      <li><strong>ទិន្នន័យចែករំលែក៖</strong> កូអរដោនេទីតាំងសម្រាប់បង្ហាញផែនទី និងការគណនាចម្ងាយ។</li>
+      <li><strong>ឯកជនភាព៖</strong> Google Maps ស្ថិតនៅក្រោម <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">គោលការណ៍ឯកជនភាពរបស់ Google</a>។</li>
+    </ul>
+
+    <p><strong>យើងមិនលក់ទិន្នន័យផ្ទាល់ខ្លួនរបស់អ្នកដល់ភាគីទីបីណាមួយឡើយ។</strong></p>
+
+    <h2>៥. ការរក្សាទុក និងសុវត្ថិភាពទិន្នន័យ</h2>
+    <ul>
+      <li>ទិន្នន័យរបស់អ្នកត្រូវបានរក្សាទុកដោយសុវត្ថិភាពដោយប្រើ<strong>ហេដ្ឋារចនាសម្ព័ន្ធ Supabase</strong> ជាមួយគោលការណ៍សុវត្ថិភាពកម្រិតជួរដេក (RLS) ដែលដាក់កម្រិតការចូលប្រើទិន្នន័យនៅកម្រិតមូលដ្ឋានទិន្នន័យ។</li>
+      <li>ទិន្នន័យទាំងអស់ដែលបញ្ជូនរវាងកម្មវិធី និងម៉ាស៊ីនមេរបស់យើងប្រើ<strong>ការអ៊ិនគ្រីបស្តង់ដារឧស្សាហកម្ម</strong> (HTTPS/TLS)។</li>
+      <li>រូបថតប្រវត្តិរូប និងរូបភាពដែលផ្ទុកឡើងត្រូវបានរក្សាទុកក្នុងកន្លែងផ្ទុកពពកដែលមានសុវត្ថិភាពជាមួយការគ្រប់គ្រងការចូលប្រើ។</li>
+      <li>យើងពិនិត្យមើលការអនុវត្តសុវត្ថិភាពរបស់យើងជាទៀងទាត់ ប៉ុន្តែគ្មានប្រព័ន្ធណាមួយដែលមានភាពស៊ាំទាំងស្រុងនឹងហានិភ័យឡើយ។ យើងលើកទឹកចិត្តអ្នកឱ្យការពារព័ត៌មានសម្ងាត់គណនីរបស់អ្នក។</li>
+    </ul>
+
+    <h2>៦. ការរក្សាទុកទិន្នន័យ</h2>
+    <ul>
+      <li><strong>គណនីសកម្ម៖</strong> យើងរក្សាទុកទិន្នន័យរបស់អ្នកដរាបណាគណនីរបស់អ្នកនៅតែសកម្ម។</li>
+      <li><strong>គណនីដែលបានបិទ៖</strong> ប្រសិនបើអ្នកបិទគណនីរបស់អ្នក ឬស្នើសុំការលុប យើងនឹងដកព័ត៌មានផ្ទាល់ខ្លួនរបស់អ្នកក្នុងរយៈពេលសមរម្យ លើកលែងតែកន្លែងដែលការរក្សាទុកត្រូវបានទាមទារសម្រាប់ការអនុលោមតាមច្បាប់ ឬបទប្បញ្ញត្តិ ការកត់ត្រាហិរញ្ញវត្ថុ ឬការដោះស្រាយវិវាទ។</li>
+      <li><strong>កំណត់ត្រាការកក់ និងប្រតិបត្តិការ</strong> អាចត្រូវបានរក្សាទុកក្នុងទម្រង់អនាមិក ឬសរុបសម្រាប់ការវិភាគអាជីវកម្មសូម្បីតែបន្ទាប់ពីការលុបគណនី។</li>
+    </ul>
+
+    <h2>៧. សិទ្ធិរបស់អ្នក</h2>
+
+    <h3>ការចូលប្រើ</h3>
+    <p>អ្នកអាចស្នើសុំច្បាប់ចម្លងនៃទិន្នន័យផ្ទាល់ខ្លួនដែលយើងមានអំពីអ្នកដោយទាក់ទងមកយើង។</p>
+
+    <h3>ការកែតម្រូវ</h3>
+    <p>អ្នកអាចធ្វើបច្ចុប្បន្នភាពព័ត៌មានគណនីភាគច្រើនរបស់អ្នកដោយផ្ទាល់នៅក្នុងកម្មវិធី (ឈ្មោះ លេខទូរសព្ទ អ៊ីមែល រូបថតប្រវត្តិរូប)។ សម្រាប់ការកែតម្រូវទិន្នន័យផ្សេងទៀត សូមទាក់ទងមកយើង ហើយយើងនឹងធ្វើបច្ចុប្បន្នភាពវាភ្លាមៗ។</p>
+
+    <h3>ការលុប</h3>
+    <p>អ្នកអាចលុបគណនីរបស់អ្នកដោយផ្ទាល់នៅក្នុងកម្មវិធីដោយចូលទៅកាន់ <strong>ប្រវត្តិរូប &gt; លុបគណនី</strong>។ ម្យ៉ាងវិញទៀត អ្នកអាចស្នើសុំការលុបដោយផ្ញើអ៊ីមែលមកយើងនៅ <a href="mailto:fixitkh26@gmail.com">fixitkh26@gmail.com</a>។ នៅពេលលុប យើងនឹងដកព័ត៌មានផ្ទាល់ខ្លួនរបស់អ្នកលើកលែងតែកន្លែងដែលការរក្សាទុកត្រូវបានទាមទារដោយច្បាប់។ សូមកត់សម្គាល់ថាការលុបគណនីរបស់អ្នកគឺជាអចិន្ត្រៃយ៍ និងមិនអាចត្រឡប់វិញបានឡើយ។</p>
+
+    <h3>ចំណូលចិត្តការជូនដំណឹង</h3>
+    <p>អ្នកអាចគ្រប់គ្រងការអនុញ្ញាតការជូនដំណឹងតាមរយៈការកំណត់ឧបករណ៍របស់អ្នក។</p>
+
+    <h2>៨. ឯកជនភាពកុមារ</h2>
+    <p>FixIt មានបំណងសម្រាប់អ្នកប្រើប្រាស់ដែលមានអាយុ <strong>១៨ ឆ្នាំ ឬច្រើនជាង</strong>។ យើងមិនប្រមូលព័ត៌មានផ្ទាល់ខ្លួនពីអ្នកណាម្នាក់ដែលមានអាយុក្រោម ១៨ ឆ្នាំដោយចេតនាឡើយ។</p>
+    <p>ប្រសិនបើយើងដឹងថាយើងបានប្រមូលទិន្នន័យពីបុគ្គលដែលមានអាយុក្រោម ១៨ ឆ្នាំ យើងនឹងចាត់វិធានការលុបព័ត៌មាននោះភ្លាមៗ។ ប្រសិនបើអ្នកជឿថាអនីតិជនម្នាក់បានផ្តល់ទិន្នន័យរបស់ពួកគេដល់យើង សូមទាក់ទងមកយើងភ្លាមៗ។</p>
+
+    <h2>៩. ការផ្ទេរទិន្នន័យអន្តរជាតិ</h2>
+    <p>FixIt ដំណើរការនៅកម្ពុជា ប៉ុន្តែហេដ្ឋារចនាសម្ព័ន្ធ backend របស់យើង (Supabase) ត្រូវបានផ្ទុកនៅលើម៉ាស៊ីនមេដែលមានទីតាំង<strong>នៅក្រៅប្រទេសកម្ពុជា</strong>។ ដោយការប្រើប្រាស់ FixIt អ្នកទទួលស្គាល់ និងយល់ព្រមឱ្យទិន្នន័យផ្ទាល់ខ្លួនរបស់អ្នកត្រូវបានផ្ទេរ រក្សាទុក និងដំណើរការនៅក្នុងប្រទេសនៅក្រៅព្រះរាជាណាចក្រកម្ពុជា។</p>
+    <p>យើងធានាថាអ្នកផ្តល់សេវាកម្មភាគីទីបីរបស់យើងរក្សាស្តង់ដារសុវត្ថិភាពសមរម្យដើម្បីការពារទិន្នន័យរបស់អ្នកដោយមិនគិតពីកន្លែងដែលវាត្រូវបានរក្សាទុក។</p>
+
+    <h2>១០. ការផ្លាស់ប្តូរគោលការណ៍នេះ</h2>
+    <ul>
+      <li>យើងអាចធ្វើបច្ចុប្បន្នភាពគោលការណ៍ឯកជនភាពនេះម្តងម្កាលដើម្បីឆ្លុះបញ្ចាំងពីការផ្លាស់ប្តូរក្នុងការអនុវត្ត បច្ចេកវិទ្យា ឬតម្រូវការផ្លូវច្បាប់របស់យើង។</li>
+      <li>យើងនឹងជូនដំណឹងដល់អ្នកប្រើប្រាស់អំពីការផ្លាស់ប្តូរសំខាន់ៗតាមរយៈកម្មវិធី ឬតាមអ៊ីមែល។</li>
+      <li>កាលបរិច្ឆេទ "បច្ចុប្បន្នភាពចុងក្រោយ" នៅផ្នែកខាងលើនៃគោលការណ៍នេះនឹងត្រូវបានកែសម្រួលទៅតាមនោះ។</li>
+      <li>ការបន្តប្រើប្រាស់ FixIt បន្ទាប់ពីការផ្លាស់ប្តូរត្រូវបានបង្ហោះ គឺជាការទទួលយករបស់អ្នកចំពោះគោលការណ៍ដែលបានធ្វើបច្ចុប្បន្នភាព។</li>
+    </ul>
+
+    <h2>១១. ទំនាក់ទំនងយើង</h2>
+    <p>ប្រសិនបើអ្នកមានសំណួរអំពីគោលការណ៍ឯកជនភាពនេះ ឬចង់អនុវត្តសិទ្ធិទិន្នន័យរបស់អ្នក សូមទាក់ទងមកយើង៖</p>
+    <div class="contact-card">
+      <h3>FixIt Cambodia</h3>
+      <p>
+        អ៊ីមែល៖ <a href="mailto:fixitkh26@gmail.com">fixitkh26@gmail.com</a><br>
+        ជំនួយ៖ <a href="mailto:fixitsupport.kh@gmail.com">fixitsupport.kh@gmail.com</a>
+      </p>
+    </div>
+
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p data-lang="en">&copy; 2026 FixIt Cambodia. All rights reserved.</p>
+    <p data-lang="km">&copy; 2026 FixIt Cambodia។ រក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
+    <p style="margin-top: 8px;" data-lang="en">
+      <a href="terms.html">Terms of Service</a> &nbsp;&middot;&nbsp;
+      <a href="privacy.html">Privacy Policy</a>
+    </p>
+    <p style="margin-top: 8px;" data-lang="km">
+      <a href="terms.html">លក្ខខណ្ឌនៃសេវាកម្ម</a> &nbsp;&middot;&nbsp;
+      <a href="privacy.html">គោលការណ៍ឯកជនភាព</a>
+    </p>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.body.classList.toggle('km', lang === 'km');
+      document.documentElement.lang = lang;
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-km').classList.toggle('active', lang === 'km');
+      localStorage.setItem('fixit-lang', lang);
+    }
+    (function() {
+      var saved = localStorage.getItem('fixit-lang');
+      if (saved === 'km') setLang('km');
+    })();
+  </script>
+
+</body>
+</html>
